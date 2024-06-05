@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Day Application</title>
+    <link rel="icon" href="assets/images/minilogo.jpg">
+
+    <!--my own style-->
+    <link rel="stylesheet" href="assets/styles/style.css">
+
+    
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-image">
+                <img src="assets/images/logo.jpg" alt="Logo My Day Application">
+            </div>
+            <nav class="header-nav">  
+                <ul>
+                    <li style="order:1"><a href="#id-i-k">Introspeksi dan Keberhasilan</a></li>
+                    <li style="order:2"><a href="#id-a-p"> Kebutuhan air putih harian</a></li>
+                    <li style="order:3"><a href="#id-k-m">Kutipan Motivasi</a></li>
+                    <li style="order:4"><a href="#id-t-h"> Tugas Harian</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="all-main">
+            <div class="main-content">
+                <article class="opening">
+                    <div class="opening-content">
+                    <h1>My Day Application</h1>
+                    <div class="opening-image">
+                        <img src="assets/images/minilogo.jpg" alt="Logo My Day Application">
+                    </div>
+                    <p>"Maximize Your Day, Reflect, Refresh, and Achieve with My Day Application!”</p>
+                    <p>"My Day Application" adalah sebuah aplikasi yang dirancang untuk membantu pengguna dalam merencanakan, melacak, dan meningkatkan produktivitas mereka sepanjang hari. Aplikasi ini menawarkan berbagai fitur yang dapat membantu pengguna mencapai tujuan harian mereka dan mengadopsi kebiasaan yang lebih baik.</p>
+                    </div>
+                </article>
+                <article class="introspeksi-keberhasilan">
+                    <h1 id="id-i-k" >Introspeksi dan Keberhasilan</h1>
+        
+                    <div class="i-k-content">
+        
+                        <div class="question">
+                        <section class="i-k">
+                            <div class="question-i-k">
+                                <div class="q1-i-k">
+                                    <p>Apa yang telah anda pelajari hari ini?</p>
+                                    <textarea id="catatan1" rows="10" cols="50"></textarea>
+                                    <br>
+                                    <button onclick="simpanCatatan(1)">Simpan</button>
+                                </div>
+                                <br><br>
+                            
+                                <div class="q2-i-k">
+                                    <p>Apa pencapaian kecil yang telah Anda raih hari ini?</p>
+                                    <textarea id="catatan2" rows="10" cols="50"></textarea>
+                                    <br>
+                                    <button onclick="simpanCatatan(2)">Simpan</button>    
+                                </div>
+                                <br><br>
+            
+                                <div class="q3-i-k">
+                                    <p>Catatan dan Saran untuk diri kedepannya</p>
+                                    <textarea id="saran" rows="6" cols="50"></textarea>
+                                    <br>
+                                    <button onclick="simpanSaran()">Simpan Saran</button>
+                                </div>
+                                <br><br>
+                            </div>
+                        </section>
+                        </div>
+        
+                        <div class="riwayat">
+                            <section class="riwayat-refleksi">
+                                <h1>Riwayat Introspeksi dan Keberhasilan anda</h1>
+            
+                                <div class="riwayat-i-k">
+                                    <table border="1" cellpadding="6" cellspacing="20" bgcolor="#E8F6EF">
+                                        <tr bgcolor="white">
+                                            <th>
+                                                <p>Apa yang telah anda pelajari hari ini?</p>
+                                            </th>
+                                            <td>
+                                                <p><div id="catatan-terakhir1"></div></p>
+                                            </td>
+                                        </tr>
+                                        <tr bgcolor="white">
+                                            <th>
+                                                <p>Apa pencapaian kecil yang telah Anda raih hari ini?</p>
+                                            </th>
+                                            <td>
+                                                <p><div id="catatan-terakhir2"></div></p>
+                                            </td>
+                                        </tr>
+                                        <tr bgcolor="white">
+                                            <th>
+                                                <p>Catatan dan Saran untuk diri kedepannya</p>
+                                            </th>
+                                            <td>
+                                                <p><div id="saran-terakhir"></div></p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </section>
+                        </div>
+                        
+                    </div>
+                </article>
+        
+                <article class="kebutuhan-air-putih-harian">
+                    <h1 id="id-a-p" >Kebutuhan Air Putih Harian</h1>
+                    <div class="content-a-p">
+                        <div class="pengingat-a-p">
+                            <pre>
+                                Sudahkah anda minum air putih? berapa gelas? 
+                                Agar memenuhi konsumsi harian air putih dengan minimal 8 gelas/hari.
+                                Anda dapat memanfaatkan fitur gelas di bawah ini dan menekan tombol 'Minum Air' setiap anda menghabiskan 1 gelas.</pre>
+                            <p>Catatan: Cara membuat gelas di bawah ini penuh, diperlukan 8x tekan pada tombol 'Minum Air'. Hitungan dimulai dari 1, tekanlah hingga warna gelas tidak buram dan penuh. Kemudian tekan tombol 'Reset' untuk mengosongkan gelas.</p>
+                        </div>
+                        <div class="glass-content">
+                            <!--box gelas-->
+                            <div class="glass" id="glass"></div>
+                            <!--button minum air (JS)-->
+                            <div class="button">
+                                <button for="glass" onclick="minumAir()">Minum Air</button>
+                                <button onclick="resetGelas()">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+        
+                <article class="kutipan-motivasi">
+                    <h1 id="id-k-m">Kutipan Motivasi</h1>
+                    <div class="content-k-m">
+            
+                        <div class="kebahagiaan-k-m">
+                            <section>
+                                <h1>Kutipan Kebahagiaan</h1>
+                                <div class="card-container">
+                                    <div class="content-k-m card">
+                                        <pre>"Terkadang kegembiraanmu 
+        adalah sumber senyummu, 
+        tapi terkadang senyummu bisa 
+        menjadi sumber kegembiraanmu." 
+        - Thich Nhat Hanh </pre>
+                                    </div>
+                                
+                                    <div class="content-k-m card">
+                                        <pre>"Siapa pun yang
+        bahagia akan membuat 
+        orang lain bahagia." 
+        - Anne Frank</pre>
+                                    </div>
+                
+                                    <div class="content-k-m card">
+                                        <pre>"Bukan seberapa banyak yang kita miliki, 
+        tetapi seberapa banyak yang kita nikmati, 
+        yang membuat kebahagiaan." - Charles Spurgeon</pre>
+                                    </div>
+                
+                                    <div class="content-k-m card">
+                                        <pre>"Melakukan apa yang kamu suka adalah kebebasan.
+        Menyukai apa yang kamu lakukan adalah kebahagiaan." 
+        - Frank Tyger</pre>
+                                    </div>
+                                </div>
+                            </section>
+                             
+        
+                        </div>
+                        
+                    
+                        <div class="ketabahan-k-m">
+                            <section>
+                                <h1>Kutipan ketabahan</h1>
+                                <div class="content-k-m">
+                
+                                    <div class="content-k-m">
+                                        <pre>
+        "Orang yang sangat tabah adalah seseorang 
+        yang mengubah ketakutan menjadi kehati-hatian, 
+        rasa sakit menjadi transformasi, 
+        kesalahan menjadi inisiasi, 
+        dan keinginan menjadi usaha."
+        - Nassim Nicholas Taleb 
+                                        </pre>
+                                    </div>
+                
+                                    <div class="content-k-m">
+                                        <pre>
+        "Ketabahan mengajarkan bagaimana 
+        menjaga pikiran tetap tenang dan rasional 
+        tidak peduli apa yang terjadi padamu 
+        dan membantumu memahami 
+        dan fokus pada apa yang dapat kamu kendalikan, 
+        tidak khawatir, 
+        dan menerima apa yang tidak dapat kamu kendalikan." 
+        - Jonas Salzgeber
+                                        </pre>
+                                    </div>
+                
+                                    <div class="content-k-m">
+                                    <pre> 
+        "Permata tidak dapat dipoles tanpa gesekan, 
+        atau manusia yang disempurnakan tanpa ujian." 
+        - Seneca
+        
+                                    </pre>
+                                    </div>
+                
+                                    <div class="content-k-m">
+                                        <pre>
+        "Tidak peduli apa yang kamu tanggung, 
+        tapi bagaimana kamu menanggungnya." 
+        - Seneca
+                                        </pre>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+        
+                        <div class="komedi-k-m">
+                            <section >
+                                <h1>Kutipan Komedi</h1>
+                                <div class="content-k-m">
+                                    <div class="content-k-m">
+                                        <pre>
+        "Kesuksesan seseorang selalu berawal dari mimpi. 
+        Jika begitu adanya, marilah kita tidur" 
+        - Anonym
+                                        </pre>
+                                    </div>
+                                    <div class="content-k-m">
+                                        <pre>
+        "Jika tak ada bahu untuk bersandar, 
+        carilah tahu mungkin tahu bulat pengganjal lapar" 
+        - Anonym
+                                        </pre>
+                                    </div>
+                                    <div class="content-k-m">
+                                        <pre>
+        "Hidup itu singkat. 
+        Maka tersenyumlah mumpung 
+        kamu masih punya gigi." 
+        - Anonym
+                                        </pre>
+                                    </div>
+                                    <div class="content-k-m">
+                                        <pre>
+        "Nggak masalah kalau kamu nggak suka sama aku. 
+        Nggak semua orang punya selera yang bagus." 
+        - Anonym
+                                        </pre>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    
+                        <div class="kustom-k-m">
+                            <section>
+                                <h1>Kutipan Kustom</h1>
+                                <p>Silahkan tuliskan kutipan motivasi versi anda!</p>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </section>
+                        </div>
+                    </div>
+                </article>
+        
+                <article class="tugas-harian">
+                    <section class="todo-t-h">
+                        <h1 id="id-t-h">To-do list Interaktif</h1>
+                        <div class="content-t-h">
+                            <div class="todo-container">
+                                <p>Silahkan catat tugas harian yang ingin anda lakukan</p>
+                                <input type="text" id="task" placeholder="Tambah tugas...">
+                                <button id="addTask">Tambah</button>
+                                <ul id="taskList"></ul>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+        
+                <script src="assets/script/script.js"></script>
+        
+                </div>
+        
+        
+                <aside>
+                    <!--di aside harus ada biodata Tentang Saya - pembuat wesite-->
+                    <div class="aside-content">
+                        <h1>Tentang Saya</h1>
+                        <p>Nama: Qonita Qotrunnada</p>
+                        <div class="aside-image">
+                            <img src="assets/images/fotodiri.jpg" alt="Foto Diri">
+                        </div>
+                        <div class="sosial-media">
+                            <ul>
+                                <li><p>Instagram: @nadaqqn_</p></li>
+                                <li><p>Linkedin: Qonita Qotrunnada</p></li>
+                                <li><p>GitHub: nadaqqn</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>        
+        </div>
+    </main>
+    <footer>
+        <p>My Day Application : "Maximize Your Day, Reflect, Refresh, and Achieve with My Day Application!”</p>
+    </footer>
+
+    
+</body>
+</html>
